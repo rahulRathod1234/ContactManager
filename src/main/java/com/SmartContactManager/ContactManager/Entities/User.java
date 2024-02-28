@@ -11,11 +11,11 @@ import java.util.List;
 @Table(name = "USER")
 public class User {
     @Id
-    @NotBlank(message = "Name field is required!!")
-    @Size(min=2,max=20,message="minimum 2 and maximum 20 character are allowed!!")
-
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+    @NotBlank(message="Name field is required")
+    @Size(min=2,max=20,message="minimum 2 and maximum 20 character are allowed!!")
+
     private String name;
     @Column(unique = true)
     private String email;

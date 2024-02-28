@@ -15,6 +15,7 @@ public class Message {
     }
 
     public void setContent(String content) {
+
         this.content = content;
     }
 
@@ -23,6 +24,7 @@ public class Message {
     }
 
     public void setType(String type) {
+
         this.type = type;
     }
 }
