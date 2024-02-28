@@ -41,7 +41,7 @@ public class HomeController {
     }
 
     @RequestMapping(value = "/do_register", method = RequestMethod.POST)
-    public String registerUser(@Valid @ModelAttribute("user") User user, @RequestParam(value = "agreemnt", defaultValue = "true") boolean agreement, Model model, BindingResult result1, HttpSession session) {
+    public String registerUser(@Valid @ModelAttribute("user") User user,BindingResult result1, @RequestParam(value = "agreement", defaultValue = "false") boolean agreement, Model model,  HttpSession session) {
         {
             try {
 
@@ -50,7 +50,7 @@ public class HomeController {
                     throw new Exception("you have not agreed terms and condition");
                 }
                 if (result1.hasErrors()) {
-                    System.out.println("Error:" + result1.toString());
+                    System.out.println("ERROR" +result1.toString());
                     model.addAttribute("user", user);
                     return "signup";
                 }
@@ -62,7 +62,7 @@ public class HomeController {
                 user.setEnabled(true);
 
                 User result = this.userRepository.save(user);
-                model.addAttribute("User", new User());
+               model.addAttribute("user",new User());
                 session.setAttribute("message",new Message("Successfully Registered!!","alert-success"));
                 return "signup";
 

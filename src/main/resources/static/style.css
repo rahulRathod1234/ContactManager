@@ -2,7 +2,7 @@ body{
     background: #e2e2e2!important;
 
  }
- .bg-danger text-white{
+ .bg-primary text-white{
         background: #009688!important;
  }
  .banner{
@@ -12,15 +12,15 @@ body{
     color:Blue;
  }
  .my-card{
- padding:25px
+ padding:50px
  background:#FFFFFF;
 
  }
  .button{
-    padding: 50px 80px;
+    padding:  80px;
            background-color: #007bff;
            color: #fff;
-           border: 30px;
+           border: 80px;
            border-radius: 50px;
 
  }
