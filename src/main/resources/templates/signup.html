@@ -10,10 +10,10 @@
 <body>
 
 <section>
-    <div class="container">
+    < class="container">
         <div class="row">
-            <div class="col-md-6 offset-md-4">
-                <div class="my-card">
+            <section class="col-md-6 offset-md-4">
+                <form class="my-card">
 
 
 
@@ -25,9 +25,7 @@
 
 
                     <div class="container text-center">
-
                         <img class="" style="width: 60px;" src="" th:src="@{/img/photo.png}" alt="" />
-
                     </div>
 
 
@@ -45,17 +43,14 @@
                                     th:classappend="${#fields.hasErrors('name')? 'is-invalid':''}"
                                     id="name_field"
                                     aria-describedby="emailHelp"/>
-
+                               </div>
 
                             <div class="invalid-feedback" th:each="e : ${#fields.errors('name')}" th:text="${e}" >
 
                             </div>
 
 
-
-
-
-                        <!-- email field -->
+                            <!-- email field -->
                             <div class="mb-2">
                                 <label for="email_field" class="form-label">Your Email(*)</label>
                             <input
@@ -87,28 +82,28 @@
                         </div>
 
                         <!-- terms and condition agreement-->
-                        <div class="form-group form-check">
+                            <div class="form-group form-check">
                            <input type="checkbox"
                                   name="agreement"
                                   class="form-check-input"
-                                  id="agreement"
+                                  id="agreement"/>
                             </div>
 
+                            <div>
                             <label for="agreement">Accept terms and conditions</label>
-
-                        </div>
-
+                            </div>
 
 
-
-
-                        <div class="button-container">
+                           <div class="button-container">
                             <button class="button btn-warning text-black">Submit</button>
                             <button class="button  bg-primary text-white">Reset</button>
-                        </div>
+                           </div>
+                        </form>
 
-
-
+    </form>
+   </section>
+ </div>
 </section>
 </body>
-</html>
+ </html>
+
