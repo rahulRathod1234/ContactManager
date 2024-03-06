@@ -25,9 +25,9 @@ body{
 
  }
  #login .container #login-row #login-column #login-box {
-   margin-top: 120px;
+   margin-top: 1200px;
    max-width: 600px;
-   height: 320px;
+   height: 420px;
    border: 1px solid #9C9C9C;
    background-color:white;
  }
@@ -37,3 +37,47 @@ body{
  #login .container #login-row #login-column #login-box #login-form #register-link {
    margin-top: -85px;
  }
+ /* sidebar style */
+ @media only screen and (max width:600px){
+   .sidebar{
+           display:none;
+           width:80%!important;
+           background:white;
+           hieght:100vh;
+           position:fixed;
+           padding-top:20px;
+}
+.content{
+  margin-left: 0%!important;
+}
+ }
+
+.sidebar{
+    width:18%;
+    background:white;
+    hieght:100%;
+    position:fixed;
+    padding-top:45x;
+ }
+
+ .sidebar a{
+       display:black;
+       width:100%;
+       padding-top:10px 25px;
+       text-decoration:none;
+       color:gray;
+ }
+
+ .sidebar a.hover{
+ background:#e2e2e2
+}
+
+.sidebar .divider{
+   height: .5px;
+   width:100%;
+}
+
+.content{
+    margin-left:20%;
+ }
+
